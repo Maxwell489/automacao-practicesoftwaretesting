@@ -14,8 +14,11 @@ describe("Cadastro de Contato", () => {
     cy.get('[data-test="message"]').type(
       "Lorem ipsum turpis tempus massa donec semper donec bibendum, cursus libero erat eget ante vestibulum praesent porta, tempor aliquet ornare arcu condimentum neque maecenas.",
     );
+
     //cy.get('[data-test="attachment"]').selectFile("cypress/fixtures/teste.txt");
     cy.get('[data-test="contact-submit"]').click();
-    cy.contains("Thanks for your message! We will contact you shortly.").should("be.visible");
+    cy.contains("Thanks for your message! We will contact you shortly.").should(
+      "be.visible",
+    );
   });
 });

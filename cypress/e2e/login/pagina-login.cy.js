@@ -10,9 +10,9 @@ describe("Pagina de Login", () => {
   });
 
   context("Login incorreto", () => {
-  it.only("deve exibir erro ao tentar logar com credenciais inválidas", () => {
-    cy.loginIncorreto();
-  });
+    it.only("deve exibir erro ao tentar logar com credenciais inválidas", () => {
+      cy.loginIncorreto();
+    });
   });
 
   context("logout", () => {

@@ -45,7 +45,7 @@ describe("Cadastro do usuario", () => {
       cy.contains("Password is required").should("be.visible");
       cy.contains("Password must be minimal 6 characters long.").should(
         "be.visible",
-        );
+      );
       cy.contains("Password must include invalid characters.").should(
         "be.visible",
       );

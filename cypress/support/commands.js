@@ -6,8 +6,8 @@ Cypress.Commands.add("login", (email, password) => {
 });
 
 Cypress.Commands.add("logout", () => {
-    cy.get('[data-test="nav-menu"]').click()
-    cy.get('[data-test="nav-sign-out"]').click();
+  cy.get('[data-test="nav-menu"]').click();
+  cy.get('[data-test="nav-sign-out"]').click();
 });
 
 Cypress.Commands.add("loginIncorreto", () => {
