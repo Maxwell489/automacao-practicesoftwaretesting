@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-06-24T17:16:51.577Z",
+    "end": "2025-06-24T17:16:59.586Z",
+    "duration": 8009,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0ba89389-36a2-4a4b-aff0-29eefc19b082",
+      "title": "",
+      "fullFile": "cypress\\e2e\\cadastro-correto.cy.js",
+      "file": "cypress\\e2e\\cadastro-correto.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2ecda9b2-aa24-4fa5-8002-3fee066c0bc4",
+          "title": "Cadastro do usuario",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve permitir o cadastro do usuario",
+              "fullTitle": "Cadastro do usuario Deve permitir o cadastro do usuario",
+              "timedOut": null,
+              "duration": 5928,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[data-test=\"first-name\"]').type('Nome');\ncy.get('[data-test=\"last-name\"]').type('Sobrenome');\ncy.get('[data-test=\"dob\"]').type('1990-01-01');\ncy.get('[data-test=\"street\"]').type('Rua Exemplo, 123');\ncy.get('[data-test=\"postal_code\"]').type('12345-678');\ncy.get('[data-test=\"city\"]').type('Cidade Exemplo');\ncy.get('[data-test=\"state\"]').type('Estado Exemplo');\ncy.get('[data-test=\"country\"]').select('Argentina');\ncy.get('[data-test=\"phone\"]').type('1234567890');\ncy.get('[data-test=\"email\"]').type('emaildostestes@teste.com');\ncy.get('[data-test=\"password\"]').type('Senh@segura123');\ncy.get('[data-test=\"register-submit\"]').click();",
+              "err": {},
+              "uuid": "308a5017-9017-4a9e-9bea-cfec16fd808a",
+              "parentUUID": "2ecda9b2-aa24-4fa5-8002-3fee066c0bc4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "308a5017-9017-4a9e-9bea-cfec16fd808a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5928,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
