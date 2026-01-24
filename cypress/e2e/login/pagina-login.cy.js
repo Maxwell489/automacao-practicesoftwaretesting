@@ -18,7 +18,8 @@ describe("Pagina de Login", () => {
   context("logout", () => {
     it.only("deve fazer logout com sucesso", () => {
       cy.login("emaildostestes3@teste.com", "Senh@segura1234");
-      cy.wait(2000); // espera 2 segundos para garantir que o login foi concluído
+      cy.wait(2000); 
+      // espera 2 segundos para garantir que o login foi concluído
       cy.logout();
     });
   });
