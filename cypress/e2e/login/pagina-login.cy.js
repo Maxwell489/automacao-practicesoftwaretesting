@@ -1,6 +1,8 @@
 describe("Pagina de Login", () => {
   beforeEach(() => {
-    cy.visit("https://practicesoftwaretesting.com/"); // Altere para a URL real da sua página de login
+    cy.visit("https://practicesoftwaretesting.com/"); 
+    // Altere para a URL real da sua página de login
+    
   });
 
   context("Login correto", () => {
@@ -10,9 +12,9 @@ describe("Pagina de Login", () => {
   });
 
   context("Login incorreto", () => {
-    it.only("deve exibir erro ao tentar logar com credenciais inválidas", () => {
-      cy.loginIncorreto();
-    });
+  it.only("deve exibir erro ao tentar logar com credenciais inválidas", () => {
+    cy.loginIncorreto();
+  });
   });
 
   context("logout", () => {
