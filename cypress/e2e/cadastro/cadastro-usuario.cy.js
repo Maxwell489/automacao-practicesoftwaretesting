@@ -1,6 +1,6 @@
 describe("Cadastro do usuario", () => {
   beforeEach(() => {
-    cy.visit("https://practicesoftwaretesting.com/");
+    cy.visit("/");
   });
 
   context("Cadastro correto", () => {

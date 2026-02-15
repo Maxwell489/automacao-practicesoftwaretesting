@@ -1,6 +1,6 @@
 describe("Compra de Produto", () => {
   beforeEach(() => {
-    cy.visit("https://practicesoftwaretesting.com/");
+    cy.visit("/");
     cy.login("emaildostestes2@teste.com", "Senh@segura1234");
   });
 

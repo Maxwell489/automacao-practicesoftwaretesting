@@ -1,6 +1,6 @@
 describe("Pagina de Login", () => {
   beforeEach(() => {
-    cy.visit("https://practicesoftwaretesting.com/"); 
+    cy.visit("/"); 
     // Altere para a URL real da sua página de login
     
   });
