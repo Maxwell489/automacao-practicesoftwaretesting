@@ -17,35 +17,20 @@ Cypress.Commands.add("loginIncorreto", () => {
   cy.contains("Password is required").should("be.visible");
 });
 
-Cypress.Commands.add(
-  "cadastro",
-  (
-    primeironome,
-    sobrenome,
-    datanascimento,
-    rua,
-    codigopostal,
-    cidade,
-    estado,
-    pais,
-    telefone,
-    email,
-    senha,
-  ) => {
-    cy.get('[data-test="first-name"]').type(primeironome);
-    cy.get('[data-test="last-name"]').type(sobrenome);
-    cy.get('[data-test="dob"]').type(datanascimento);
-    cy.get('[data-test="street"]').type(rua);
-    cy.get('[data-test="postal_code"]').type(codigopostal);
-    cy.get('[data-test="city"]').type(cidade);
-    cy.get('[data-test="state"]').type(estado);
-    cy.get('[data-test="country"]').select(pais);
-    cy.get('[data-test="phone"]').type(telefone);
-    cy.get('[data-test="email"]').type(email);
-    cy.get('[data-test="password"]').type(senha);
-    cy.get('[data-test="register-submit"]').click();
-  },
-);
+Cypress.Commands.add("cadastro", (usuario) => {
+  cy.get('[data-test="first-name"]').type(usuario.primeironome);
+  cy.get('[data-test="last-name"]').type(usuario.sobrenome);
+  cy.get('[data-test="dob"]').type(usuario.datanascimento);
+  cy.get('[data-test="street"]').type(usuario.rua);
+  cy.get('[data-test="postal_code"]').type(usuario.codigopostal);
+  cy.get('[data-test="city"]').type(usuario.cidade);
+  cy.get('[data-test="state"]').type(usuario.estado);
+  cy.get('[data-test="country"]').select(usuario.pais);
+  cy.get('[data-test="phone"]').type(usuario.telefone);
+  cy.get('[data-test="email"]').type(usuario.email);
+  cy.get('[data-test="password"]').type(usuario.senha);
+  cy.get('[data-test="register-submit"]').click();
+});
 
 // ***********************************************
 // This example commands.js shows you how to
