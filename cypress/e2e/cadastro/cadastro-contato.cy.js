@@ -4,7 +4,7 @@ describe("Cadastro de Contato", () => {
     cy.login("emaildostestes2@teste.com", "Senh@segura1234");
   });
 
-  it.only("deve cadastrar um contato com sucesso", () => {
+  it("deve cadastrar um contato com sucesso", () => {
     cy.get('[data-test="nav-home"]').click();
     cy.get('[data-test="nav-contact"]').click();
     cy.get('[data-test="first-name"]').type("Ana");

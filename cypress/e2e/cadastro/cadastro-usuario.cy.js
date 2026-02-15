@@ -4,7 +4,7 @@ describe("Cadastro do usuario", () => {
   });
 
   context("Cadastro correto", () => {
-    it.only("Deve permitir o cadastro do usuario", () => {
+    it("Deve permitir o cadastro do usuario", () => {
       cy.get('[data-test="nav-sign-in"]').click();
       cy.location("pathname").should("eq", "/auth/login");
       cy.get('[data-test="register-link"]').click();
@@ -27,7 +27,7 @@ describe("Cadastro do usuario", () => {
   });
 
   context("Cadastro incorreto", () => {
-    it.only("Não deve permitir o cadastro do usuario", () => {
+    it("Não deve permitir o cadastro do usuario", () => {
       cy.visit("https://practicesoftwaretesting.com/");
       cy.get('[data-test="nav-sign-in"]').click();
       cy.get('[data-test="register-link"]').click();
