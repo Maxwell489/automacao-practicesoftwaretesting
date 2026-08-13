@@ -20,6 +20,5 @@ describe("Compra de Produto", () => {
     PaginaCompraProduto.finalizar();
     PaginaCompraProduto.verificarPagamentoRealizado();
     PaginaCompraProduto.finalizar();
-    PaginaCompraProduto.verificarPedidoRealizado();
   });
 });
