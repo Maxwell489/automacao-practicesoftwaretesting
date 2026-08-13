@@ -1,28 +1,27 @@
+import PaginaLogin from "../../support/pages/login";
+
 describe("Pagina de Login", () => {
   beforeEach(() => {
-    cy.visit("/"); 
-    // Altere para a URL real da sua página de login
-    
+    PaginaLogin.visitar();
   });
 
   context("Login correto", () => {
-    it("deve exibir o formulário de login", () => {
-      cy.login("emaildostestes2@teste.com", "Senh@segura1234");
+    it("Deve exibir o formulário de login", () => {
+      PaginaLogin.fazerLogin();
     });
   });
 
   context("Login incorreto", () => {
-  it("deve exibir erro ao tentar logar com credenciais inválidas", () => {
-    cy.loginIncorreto();
-  });
+    it("Deve exibir erro ao tentar logar com credenciais inválidas", () => {
+      PaginaLogin.fazerLoginInvalido();
+    });
   });
 
   context("logout", () => {
-    it("deve fazer logout com sucesso", () => {
-      cy.login("emaildostestes3@teste.com", "Senh@segura1234");
-      cy.wait(2000); 
-      // espera 2 segundos para garantir que o login foi concluído
-      cy.logout();
+    it("Deve fazer logout com sucesso", () => {
+      PaginaLogin.fazerLogin();
+      cy.wait(2000);
+      PaginaLogin.fazerLogout();
     });
   });
 });
