@@ -10,9 +10,7 @@
 //
 //
 // -- This is a parent command --
-Cypress.Commands.add('login', (email, password) => { 
-    "admin@practicesoftwaretesting.com", "welcome01"
-})
+Cypress.Commands.add('login', (email, password) => {})
 //
 //
 // -- This is a child command --
