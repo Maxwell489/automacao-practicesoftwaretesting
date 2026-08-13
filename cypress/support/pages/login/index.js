@@ -1,4 +1,4 @@
-import { LoginElements as elements } from "./elements/login.elements";
+import { LoginElements as elementslogin } from "./elements/login.elements";
 
 class PaginaLogin {
   visitar() {
@@ -6,22 +6,38 @@ class PaginaLogin {
   }
 
   fazerLogin() {
-    cy.get(elements.botaoEntrar).click();
-    cy.get(elements.campoEmail).type(Cypress.env("email"));
-    cy.get(elements.campoSenha).type(Cypress.env("password"));
-    cy.get(elements.botaoLogin).click();
+    cy.get(elementslogin.botaoEntrar)
+      .click();
+
+    cy.get(elementslogin.campoEmail)
+      .type(Cypress.env("email"));
+
+    cy.get(elementslogin.campoSenha)
+      .type(Cypress.env("password"));
+
+    cy.get(elementslogin.botaoLogin)
+      .click();
   }
 
   fazerLoginInvalido() {
-    cy.get(elements.botaoEntrar).click();
-    cy.get(elements.botaoLogin).click();
-    cy.contains(elements.erroEmailObrigatorio).should("be.visible");
-    cy.contains(elements.erroSenhaObrigatoria).should("be.visible");
+    cy.get(elementslogin.botaoEntrar)
+      .click();
+
+    cy.get(elementslogin.botaoLogin)
+      .click();
+
+    cy.contains(elementslogin.erroEmailObrigatorio)
+      .should("be.visible");
+      
+    cy.contains(elementslogin.erroSenhaObrigatoria)
+      .should("be.visible");
   }
 
   fazerLogout() {
-    cy.get(elements.botaoMenu).click();
-    cy.get(elements.botaoSair).click();
+    cy.get(elementslogin.botaoMenu)
+      .click();
+    cy.get(elementslogin.botaoSair)
+      .click();
   }
 }
 
